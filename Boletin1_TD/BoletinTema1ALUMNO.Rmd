@@ -260,7 +260,7 @@ ggplot(cabbages, aes(VitC, fill=Cult))+geom_histogram(position="dodge")
 #Diagrama de dispersión global.
 plot(whiteside$Temp, whiteside$Gas)
 #Diagrama de dispersión etiquetando según un factor.
-plot(whiteside$Temp, whiteside$Gas, pch=c(6,16)[whiteside\$Insul])
+plot(whiteside$Temp, whiteside$Gas, pch=c(6,16)[whiteside$Insul])
 legend(x="topright",legend=c("Insul = Before","Insul = After"), pch=c(6,16))
 # Planteamos 2 modelos lineales, uno para los datos de cada factor
 Model1 <- lm(Gas ~ Temp, data = whiteside, subset = which(Insul == "Before"))
@@ -289,12 +289,24 @@ a.  Utiliza un procedimiento análogo para determinar si se aprecia una relació
 b.  Repite el apartado anterior, pero obteniendo un modelo para cada una de las dos variedades de calabaza, **Cult**. Ver[Parámetros básicos plot](https://www.statmethods.net/advgraphs/parameters.html).
 
 ```{r}
+#Vamos utilizar un metodo alternativo con ggplot y el metodo de arriba a la vez
+
+#Primero con todos los datos
+ggplot(cabbages, aes(HeadWt, VitC))+geom_point()+geom_smooth()
+
+#Segundo diferenciando por Cult
+ggplot(cabbages, aes(HeadWt, VitC, shape=Cult, color=Cult))+geom_point()+geom_smooth()
 
 
-
-
-
-
+plot(c$HeadWt, c$VitC)
+Model5 <- lm(c$VitC ~ c$HeadWt, data = whiteside)
+abline(Model5)
+plot(c$HeadWt, c$VitC, pch=c(6,16)[c$Cult])
+legend(x="topright",legend=c("Cult=c39","cult=c52"), pch=c(6,16))
+Model3 <- lm(c$VitC ~ c$HeadWt, data = whiteside, subset = which(c$Cult == "c39"))
+Model4 <- lm(c$VitC ~ c$HeadWt, data = whiteside, subset = which(c$Cult == "c52"))
+abline(Model3, lty=2)
+abline(Model4)
 
 
 
