@@ -95,6 +95,9 @@ c.  Muestra los nombres de las filas y las columnas (**rownames**, **colnames**)
 mammals
 Animals2
 
+a=mammals
+b=Animals2
+
 help("mammals")
 help("Animals2")
 
@@ -130,29 +133,21 @@ commonAnimals
 e.  Usa **setdiff** para averiguar qué animales no están en ambos conjuntos. ¿Cuántos son ?. ¿Qué tipo de animales son?
 
 ```{r}
+#Los que se encuentran en a y no en b
+uncommonAnimals1 = setdiff(rownames(a), rownames(b))
+uncommonAnimals1
 
-
-
-
-
-
+#Los que se encuentran en b y no en a
+uncommonAnimals2 = setdiff(rownames(b), rownames(a))
+uncommonAnimals2
 ```
 
 e.  Determina las diferencia entre los animales que no aparecen en ambos conjuntos.
 
 ```{r}
+#A hechos practicos, los unicos animales que no aparecen en los 2 dataframes son solamente Dipliodocus, Branchiosaurus y Triceratops. Que son los 3 dinosaurios.
 
-
-
-
-
-
-
-
-
-
-
-
+#Digo que es a hechos practicos porque en realidad los otros 4 que no aparecen realmente se diferencian solo porque el nombre está escrito diferente pero en realidad se refieren al mismo animal
 ```
 
 2.  La funcion **qqPlot** del paquete **car** puede ser utilizada para determinar gráficamente si una serie de puntos siguen una distribución de datos Gaussiana. Si las muestras están dentro de las líneas discontinuas podemos indicar que siguen una distribución Gaussiana con un 95 % de confianza. Utilizando esta función representa el logaritmo neperiano (**log**) del peso del cerebro (**brain weigths**) del registro de datos **mammals** del paquete **MASS** y conjunto de datos **Animals2** de la librería **robustbase**. ¿Presentan el mismo comportamiento ?.¿Podríamos decir que siguen una distribución Gaussiana ?
