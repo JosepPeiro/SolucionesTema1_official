@@ -188,32 +188,18 @@ nrow(libReturn$results)
     d.  Utiliza la función **summary**, sobre **cabbages** y **Chile** y observa como, además de otros estadísticos, también devuelve el número de valores perdidos de cada variable.
 
 ```{r}
+library(MASS)
+cabbages
+c=cabbages
 
+dim(c)
+#1º -> Nº Registros = 60
+#2º -> Nº Variables = 3
 
+str(c)
+#3º -> Tipos de variables -> Factor, Factor, numeric, integer
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+glimpse(c)
 
 ```
 
