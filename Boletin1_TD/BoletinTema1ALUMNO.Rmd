@@ -206,6 +206,23 @@ colSums(is.na(c))
 sum(is.na(c))
 all(is.na(c)==FALSE)
 #No hay ningun valor perdido
+
+library(car)
+Chile
+d=Chile
+
+dim(d)
+str(d)
+glimpse(d)
+#1º -> Nº Registros = 2700
+#2º -> Nº Variables = 8
+#3º -> Tipos de variables -> Factor, integer, Factor, integer, Factor, integer, numeric, Factor
+
+is.na(d)
+colSums(is.na(d))
+sum(is.na(d))
+all(is.na(d)==FALSE)
+#Hay 295 valores perdidos, de los cuales 1 es en age, 11 en education, 98 en income, 17 en statusquo y 168 en vote
 ```
 
 5.  Muchas pruebas estadísticas suponen que los datos siguen una distribución Gaussiana. Utiliza la aproximación visual proporcionada por **qqPlot** para determinar si podemos asumir que las variables **HeadWt** y **VitC** del conjunto **cabbages** verifican esta condición.
