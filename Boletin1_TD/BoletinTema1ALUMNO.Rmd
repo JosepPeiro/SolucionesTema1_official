@@ -108,6 +108,16 @@ primera_vision = function(x){
 primera_vision(mammals)
 primera_vision(Animals2)
 
+nombre_filas_columnas = function(x){
+  print("Filas:")
+  print(rownames(x))
+  print("Columnas:")
+  print(colnames(x))
+}
+
+nombre_filas_columnas(mammals)
+nombre_filas_columnas(Animals2)
+
 ```
 
 d.  Usa la función **intersect** y almacena en la variable *commonAnimals* los aminales que aparezcan en ambos conjuntos
