@@ -175,9 +175,8 @@ str(libReturn)
 
 head(libReturn$results)
 
-
-
-
+nrow(libReturn$results)
+#Tengo 255 librerias actualmente
 
 ```
 
