@@ -223,6 +223,9 @@ colSums(is.na(d))
 sum(is.na(d))
 all(is.na(d)==FALSE)
 #Hay 295 valores perdidos, de los cuales 1 es en age, 11 en education, 98 en income, 17 en statusquo y 168 en vote
+
+summary(c)
+summary(d) #Es verdad
 ```
 
 5.  Muchas pruebas estadísticas suponen que los datos siguen una distribución Gaussiana. Utiliza la aproximación visual proporcionada por **qqPlot** para determinar si podemos asumir que las variables **HeadWt** y **VitC** del conjunto **cabbages** verifican esta condición.
