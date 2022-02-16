@@ -173,7 +173,7 @@ qqPlot(log(b$brain))
 libReturn = library()
 str(libReturn)
 
-
+head(libReturn$results)
 
 
 
