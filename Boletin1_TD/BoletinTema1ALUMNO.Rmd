@@ -98,20 +98,15 @@ Animals2
 help("mammals")
 help("Animals2")
 
+primera_vision = function(x){
+  print(dim(x))
+  print(head(x))
+  print(tail(x))
+  print(str(x))
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+primera_vision(mammals)
+primera_vision(Animals2)
 
 ```
 
